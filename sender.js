@@ -7,7 +7,7 @@ import { Request } from "./index.js";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 async function main() {
-  const worker = fork(join(__dirname, "replier-pair.js"));
+  const worker = fork(join(__dirname, "reciever.js"));
   const channel = new Request(worker);
 
   try {
